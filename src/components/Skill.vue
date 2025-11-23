@@ -32,11 +32,11 @@
 	<div>
 		<h3 class="text-2xl font-semibold mb-4 sm:text-3xl max-lg:text-left">{{ field }}</h3>
 		<ul class="text-left space-y-4">
-			<li v-for="key in keys" class="flex items-center gap-2"><img :src="'/skills/' + skill_list[key].icon" class="inline-block w-10 h-10" /> <span class="block text-lg font-medium">{{ skill_list[key].label }}</span></li>
+			<li v-for="key in keys" class="flex items-center gap-2"><img :src="'/skills/' + skill_list[key]!.icon" class="inline-block w-10 h-10" /> <span class="block text-lg font-medium">{{ skill_list[key]!.label }}</span></li>
 		</ul>
 		<h4 v-if="learning" class="text-xl font-semibold mt-6 mb-4 sm:text-2xl">En apprentissage</h4>
 		<ul v-if="learning" class="text-left">
-			<li v-for="key in learning" class="flex items-center gap-2"><img :src="'/skills/' + skill_list[key].icon" class="inline-block w-10 h-10" /> <span class="block text-lg font-medium">{{ skill_list[key].label }}</span></li>
+			<li v-for="key in learning" class="flex items-center gap-2"><img :src="'/skills/' + skill_list[key]!.icon" class="inline-block w-10 h-10" /> <span class="block text-lg font-medium">{{ skill_list[key]!.label }}</span></li>
 		</ul>
 	</div>
 </template>
